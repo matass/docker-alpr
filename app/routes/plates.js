@@ -8,7 +8,10 @@ router.get('/plates/:plate', function(req, res){
     function(error, stdout, stderr){
       var plateOutput = JSON.parse(stdout.toString());
       res.render('index', {
-        parsed_data: JSON.stringify(plateOutput),
+        img_width: JSON.stringify(plateOutput['img_width']),
+        img_height: JSON.stringify(plateOutput['img_height']),
+        processing_time_ms: JSON.stringify(plateOutput['processing_time_ms']),
+        results: plateOutput.results[0],
         image: '/' + req.params.plate
       });
     }

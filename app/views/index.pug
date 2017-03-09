@@ -1,4 +1,23 @@
 doctype html
 html(lang='en')
+  head
+    style.
+      table { width: 350px }
+      table td { 
+        padding: 5px;
+        border: solid 1px #999 }
   body
-    span #{parsed_data}
+    span image width: #{img_width} <br>
+    span image height: #{img_height} <br>
+    span processing time ms: #{processing_time_ms} <br> <br>
+    table.table
+      thead
+        tr
+          td plate
+          td confidence
+          td matches_template
+      tbody
+        each _, i in Array(10)
+          tr
+            each plates in results.candidates[i]
+              td= plates
