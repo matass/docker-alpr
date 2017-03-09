@@ -2,3 +2,91 @@
 
 docker-compose build <br />
 docker-compose up
+#
+running on `localhost:3030`
+#
+sample json format
+```
+[
+  {
+    "plate":"EEU919",
+    "confidence":92.471519,
+    "matches_template":0,
+    "plate_index":1,
+    "region":"",
+    "region_confidence":0,
+    "processing_time_ms":20.705328,
+    "requested_topn":10,
+    "coordinates":[
+      {
+        "x":1077,
+        "y":1616
+      },
+      {
+        "x":1554,
+        "y":1596
+      },
+      {
+        "x":1557,
+        "y":1692
+      },
+      {
+        "x":1083,
+        "y":1711
+      }
+    ],
+    "candidates":[
+      {
+        "plate":"EEU919",
+        "confidence":92.471519,
+        "matches_template":0
+      },
+      {
+        "plate":"EEU91S",
+        "confidence":80.355148,
+        "matches_template":0
+      },
+      {
+        "plate":"5EU919",
+        "confidence":78.855392,
+        "matches_template":0
+      },
+      {
+        "plate":"EEU91",
+        "confidence":76.827408,
+        "matches_template":0
+      },
+      {
+        "plate":"EU919",
+        "confidence":76.621979,
+        "matches_template":0
+      },
+      {
+        "plate":"EE0919",
+        "confidence":76.498428,
+        "matches_template":0
+      },
+      {
+        "plate":"EE919",
+        "confidence":75.41877,
+        "matches_template":0
+      },
+      {
+        "plate":"5EU91S",
+        "confidence":66.739021,
+        "matches_template":0
+      },
+      {
+        "plate":"EU91S",
+        "confidence":64.505608,
+        "matches_template":0
+      },
+      {
+        "plate":"EE091S",
+        "confidence":64.38205,
+        "matches_template":0
+      }
+    ]
+  }
+]
+```
