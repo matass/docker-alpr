@@ -28,7 +28,7 @@ router.post('/api/upload', function(req, res, next) {
       return res.end("error");
     }
     else {
-      return res.end("<a href='/plates/" + filename + "'>Detect plate</a>");
+      res.redirect('/plates/' + filename);
     }
   });
 });

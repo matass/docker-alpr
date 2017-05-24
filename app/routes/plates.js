@@ -19,7 +19,7 @@ router.get('/plates/:plate', function(req, res){
 });
 
 function alpr(plate) {
-  return 'alpr -c eu -j /src/app/public/images/' + plate;
+  return 'alpr -c eu -p lt -j /src/app/public/images/' + plate;
 }
 
 module.exports = router;

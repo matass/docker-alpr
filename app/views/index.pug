@@ -10,14 +10,17 @@ html(lang='en')
     span image width: #{img_width} <br>
     span image height: #{img_height} <br>
     span processing time ms: #{processing_time_ms} <br> <br>
-    table.table
-      thead
-        tr
-          td plate
-          td confidence
-          td matches_template
-      tbody
-        each _, i in Array(10)
+    if results
+      table.table
+        thead
           tr
-            each plates in results.candidates[i]
-              td= plates
+            td plate
+            td confidence
+            td matches_template
+        tbody
+          each _, i in Array(3)
+            tr
+              each plates in results.candidates[i]
+                td= plates
+    else
+      span plate was not recognised
