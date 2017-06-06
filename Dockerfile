@@ -1,7 +1,6 @@
 FROM debian:sid
 
 RUN apt-get update && apt-get install -y \
-
   openalpr \
   openalpr-daemon \
   openalpr-utils \
@@ -9,12 +8,8 @@ RUN apt-get update && apt-get install -y \
   curl \
   wget \
   libssl-dev \
-  git-core
-
-RUN apt-get update && apt-get install -y \
-  build-essential \
-  openssl \
-  libssl-dev
+  git-core \
+  build-essential
 
 RUN apt-get install -y nodejs-legacy npm
 
